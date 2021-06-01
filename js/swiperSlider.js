@@ -1,2 +1,9 @@
 // Инициализируем Swiper
-new Swiper('.swiper-container');
+const swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.projects-pagination',
+    bulletClass: 'projects-bullet',
+    bulletActiveClass: 'projects-bullet-active',
+    clickable: true
+  },
+});

@@ -190,6 +190,32 @@ body {
   margin-right: 16px;
 }
 
+.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+.projects-bullet {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #FFBB01;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.projects-bullet-active {
+  width: 10px;
+  height: 10px;
+  background: #FFBB01;
+  border: 2px solid #FFBB01;
+  box-sizing: border-box; /* здесь это необязательно */
+}
+
 .project-title {
   flex-basis: 100%;
   font-weight: bold;
