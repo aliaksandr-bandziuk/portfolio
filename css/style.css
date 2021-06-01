@@ -140,6 +140,65 @@ body {
   margin: 0;
 }
 
+/* slider */
+
+.projects {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 95.44%);
+  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+
+.project-slide {
+  display: flex;
+  align-items: flex-start;
+  /* так картинку не плющит */
+  /* Плюс выравниваем текст и картинку по высоте */
+  justify-content: space-between;
+}
+
+.project-text {
+  flex-basis: 60%;
+  /* Отодвигаем текст влево */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-time, .project-cost {
+  flex-basis: 50%;
+  margin-bottom: 44px;
+}
+
+.project-time, .project-cost, .project-feedback {
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-subtitie {
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.project-paragraph {
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.project-icon {
+  margin-right: 16px;
+}
+
+.project-title {
+  flex-basis: 100%;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
 /* contacts */
 
 .contacts-form {
@@ -216,6 +275,7 @@ body {
 
 .contacts-social {
   flex-basis: 100%;
+  /* чтобы отодвинуть контент вправо */
 }
 
 .contacts-title {
