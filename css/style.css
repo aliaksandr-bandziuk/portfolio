@@ -1,5 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .img {
@@ -44,6 +53,29 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 105px;
+}
+
+/* menu */
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.menu-item:first-child {
+  margin-left: 0;
+}
+
+.menu-item:hover {
+  text-transform: uppercase;
+  color: #FFBB01;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .social-link {
