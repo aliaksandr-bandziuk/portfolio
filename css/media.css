@@ -62,6 +62,21 @@
     width: 100%; /* на всю ширину дива menu-burger (30px) */
     height: 2px; /* высота полоски */
     top: 9px; /* двигаем полоску в середину */
+    transition: all 0.3s;
+  }
+
+  .menu-burger:hover {
+    cursor: pointer;
+    transform: translate() rotate(45deg);
+    transform: translate() rotate(-45deg);
+  }
+
+  .menu-burger-before__close {
+    transform: translate() rotate(45deg);
+  }
+
+  .menu-burger-after {
+    transform: translate() rotate(-45deg);
   }
 
   .menu {
