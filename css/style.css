@@ -43,19 +43,32 @@ body {
 }
 
 .hero {
-  padding-top: 50px;
+  padding-top: 200px;
   background: linear-gradient(0.01deg, #000000 0.01%, rgba(0, 0, 0, 0) 95.44%);
   padding-bottom: 155px;
+}
+
+.header-wrapper {
+  padding-top: 5px;
+  width: 100%;
+  position: fixed;
+  background: #1b1b25;
+  opacity: 0.9;
 }
 
 .hero-header{ 
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 105px;
+  align-items: center;  
+}
+
+.logo {
+  /* width: 150px; */
+  height: 55px;
 }
 
 /* menu */
+
 
 .menu-items {
   display: flex;

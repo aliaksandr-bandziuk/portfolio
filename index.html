@@ -11,12 +11,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-  <header class="hero">
+  
+  <header class="header-wrapper">
     <div class="container">
       <div class="hero-header">
-        <img src="img\logo.svg" alt="Альт текст" class="logo">
+        <img src="img/front-logo.png" alt="Frontender freelancer" class="logo">
+        <div class="menu-burger">
+          <span></span>
+        </div>
         <nav class="menu">
           <ul class="menu-items">
             <li class="menu-item"><a href="#excellence">Преимущества</a></li>
@@ -29,15 +34,13 @@
           <!-- /.menu-items -->
         </nav>
         <!-- /.menu -->
-        <!-- <div class="social-links">
-          <a href="https://github.com/aliaksandr-bandziuk/" class="social-link"><img src="img\social\facebook.svg" alt="Github"></a>
-          <a href="https://github.com/aliaksandr-bandziuk/" class="social-link"><img src="img\social\twitter.svg" alt="Twitter"></a>
-          <a href="https://github.com/aliaksandr-bandziuk/" class="social-link"><img src="img\social\instagram.svg" alt="Instagram"></a>
-          <a href="https://github.com/aliaksandr-bandziuk/" class="social-link"><img src="img\social\facebook.svg" alt="Facebook"></a>
-        </div> -->
-        <!-- /.social-links -->
       </div>
       <!-- /.hero-header -->
+    </div>
+  </header>
+  <div class="hero">
+    <div class="container">
+      
       <div class="hero-content">
         <div class="hero-text">
           <span class="hero-subtitle wow fadeInRight" data-wow-delay="0.1s">Веб-разработчик</span>
@@ -53,7 +56,7 @@
       </div>
       <!-- /.hero-content -->
     </div>
-  </header>
+  </div>
 
   <main>
     <section class="features section">
@@ -283,4 +286,5 @@
   <script src="js/wow.min.js"></script>
   <script src="js/libraries.js"></script>
   <script src="js/swiperSlider.js"></script>
+  <script src="js/menuBurger.js"></script>
 </html>
