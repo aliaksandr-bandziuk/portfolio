@@ -91,6 +91,7 @@ body {
 .menu-item {
   list-style: none;
   margin-left: 20px;
+  text-transform: uppercase;
 }
 
 .menu-item:first-child {
