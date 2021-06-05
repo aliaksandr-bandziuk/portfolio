@@ -22,6 +22,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #20202D;
+  border-radius: 50%;
+  box-shadow: -3px -3px 10px 1px #ffbb01;
+}
+
+.scroll-top:hover {
+  cursor: pointer;
+}
+
 .container {
   width: 90%;
   max-width: 945px;
