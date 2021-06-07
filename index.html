@@ -21,7 +21,7 @@
 
   <header class="header-wrapper">
     <div class="container">
-      <div class="hero-header">
+      <div class="hero-header" id="hero-header">
         <img src="img/front-logo.png" alt="Frontender freelancer" class="logo">
         <div class="menu-burger">
           <span></span>
@@ -52,7 +52,9 @@
           <p class="hero-description wow fadeInRight" data-wow-delay="0.4s">
             Разрабатываю сайты для малого и среднего бизнеса. У меня можно заказать дизайн и верстку небольшого сайта или интернет-магазина
           </p>
-          <button class="button hero-button wow fadeInRight" data-wow-delay="0.6s"><a href="#contact">Бесплатная коснультация</a></button>
+          <a href="#popup">
+            <button class="button popup-button hero-button wow fadeInRight" data-wow-delay="0.6s">Бесплатная коснультация</button>
+          </a>
         </div>
         <!-- /.hero-text -->
         <div class="hero-avatar wow heartBeat" data-wow-delay="0.9s"></div>
@@ -247,7 +249,7 @@
           <h4 class="form-title">Можете просто оставить заявку, я позвоню вам сегодня</h4>
           <input type="text" class="input input-name" placeholder="Ваше имя">
           <input type="text" class="input input-phone" placeholder="Ваш телефон">
-          <button class="button form-button wow jackInTheBox" data-wow-delay="2s">Бесплатная консультация</button>
+          <button class="button form-button wow jackInTheBox" data-wow-delay="2s"><a href="#popup">Бесплатная консультация</a></button>
         </form>
 
         <div class="contacts-text">
@@ -284,6 +286,23 @@
       </div>
     </div>
   </footer>
+
+  <div id="popup" class="popup">
+    <a href="#hero-header" class="popup__area">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#hero-header" class="popup__close">X</a>
+          <form action="#" class="contacts-form">
+            <h4 class="form-title">Можете просто оставить заявку, я позвоню вам сегодня</h4>
+            <input type="text" class="input input-name" placeholder="Ваше имя">
+            <input type="text" class="input input-phone" placeholder="Ваш телефон">
+            <button class="button form-button"><a href="#popup">Бесплатная консультация</a></button>
+          </form>
+        </div>
+      </div>
+    </a>
+  </div>
+
 </body>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
@@ -292,4 +311,5 @@
   <script src="js/swiperSlider.js"></script>
   <script src="js/menuBurger.js"></script>
   <script src="js/scrollToTop.js"></script>
+  <script src="js/popup.js"></script>
 </html>
