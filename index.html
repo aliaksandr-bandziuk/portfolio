@@ -52,7 +52,7 @@
           <p class="hero-description wow fadeInRight" data-wow-delay="0.4s">
             Разрабатываю сайты для малого и среднего бизнеса. У меня можно заказать дизайн и верстку небольшого сайта или интернет-магазина
           </p>
-          <button class="button hero-button wow fadeInRight" data-wow-delay="0.6s"><a href="#contact">Бесплатная коснультация</a></button>
+          <button class="button hero-button modal__open wow fadeInRight" data-wow-delay="0.6s">Бесплатная коснультация</button>
         </div>
         <!-- /.hero-text -->
         <div class="hero-avatar wow heartBeat" data-wow-delay="0.9s"></div>
@@ -284,6 +284,25 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="modal__overlay hidden"></div>
+    <div class="modal__dialog hidden">
+      <button type="button" class="modal__close modal__close-button">
+        <img src="img/close.png" class="modal__close-img" alt="">
+      </button>
+      <!-- <a href="#" class="modal__close">
+        <img src="img/close.png" class="modal__close-img" alt="">
+      </a> -->
+      <form action="#" class="contacts-form contactas-form__modal">
+        <h4 class="form-title">Можете просто оставить заявку, я позвоню вам сегодня</h4>
+        <input type="text" class="input input-name" placeholder="Ваше имя">
+        <input type="text" class="input input-phone" placeholder="Ваш телефон">
+        <button class="button form-button">Бесплатная консультация</button>
+      </form>
+    </div>
+  </div>
+
 </body>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
@@ -292,4 +311,5 @@
   <script src="js/swiperSlider.js"></script>
   <script src="js/menuBurger.js"></script>
   <script src="js/scrollToTop.js"></script>
+  <script src="js/modal.js"></script>
 </html>

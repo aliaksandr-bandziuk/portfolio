@@ -394,3 +394,43 @@ body {
   color: #A5A5A5;
   margin-top: 72px;
 }
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0; 
+  bottom: 0;
+  background-color: #20202D;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  transform: translate(-50%, -50%); /* так выставляю модальное окно по центру экрана */
+}
+
+.modal__close {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+}
+
+.modal__close-button {
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.modal__close-img:hover {
+  transition: all .8s ease-in-out;
+  transform: rotate(360deg);
+  cursor: pointer;
+}
