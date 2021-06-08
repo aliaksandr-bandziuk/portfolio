@@ -43,6 +43,18 @@ modalWindow.addEventListener('click', (event) => {
 
 })
 
+// modalWindow.addEventListener('keydown', (event) => {
+  
+//   const key = event.key;
+
+//   if ((target.classList.contains('modal__overlay') ||
+//       target.classList.contains('modal__close-img')) &&
+//       key === 'Escape') {
+//         closeModalWindow();
+//       }
+
+// })
+
 const disableScroll = () => {
 
   document.body.dataset.scrollY = window.scrollY;
