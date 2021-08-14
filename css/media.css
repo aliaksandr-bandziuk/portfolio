@@ -150,6 +150,10 @@
     margin-bottom: 46px;
   }
 
+  .project-details {
+    display: none;
+  }
+
   .contacts-block {
     flex-direction: column;
     align-items: flex-start;

@@ -6,7 +6,6 @@ const menuBurger = document.querySelector('.menu-burger'),
   menuItem = document.querySelectorAll('.menu-item');
 
 menuBurger.addEventListener('click', () => {
-  console.log('Привееет');
   
   menu.classList.toggle('menu-active');
   menuItems.classList.toggle('menu-items_active');
