@@ -254,6 +254,12 @@ body {
   margin-right: 16px;
 }
 
+.project-details {
+  margin-top: 44px;
+  font-size: 18px;
+  color: #ffbb01;
+}
+
 .swiper-pagination-bullets {
   display: flex;
   align-items: center;
