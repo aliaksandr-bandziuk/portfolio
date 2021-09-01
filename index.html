@@ -7,8 +7,10 @@
   <title>Веб-разработчик Александр Бандюк, фрилансер</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">  
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu__burger.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -19,13 +21,40 @@
       <img src="img/arrow-top.png" width="30px" height="30px" alt="">
   </button>
 
+    <!-- Мобильное меню вместе с бургером -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-menu__wrapper">
+          <div class="mobile-menu__logo">
+            <p class="logo__title">Frontender</p>
+            <!-- <img src="img/front-logo.png" class="logo__title" alt="" width="25%"> -->
+          </div>
+          <div class="mobile-menu__img mobile-menu__img-open">
+          </div>
+        </div>
+    
+        <div class="mobile-menu__list mobile-menu__list-hidden">
+          <div class="header__wrapper-mobile">
+            <ul class="mobile-menu__items">
+              <li class="mobile-menu__item"><a href="#excellence">Преимущества</a></li>
+              <li class="mobile-menu__item"><a href="#last-projects">Последние проекты</a></li>
+              <li class="mobile-menu__item"><a href="#contact">Как связаться</a></li>
+            </ul>
+          </div>
+    
+          <!-- <button class="mobile-phone__button">+7 962 555-55-55</button> -->
+        </div>   
+      </div>
+
+    </div>
+
   <header class="header-wrapper">
     <div class="container">
       <div class="hero-header">
         <img src="img/front-logo.png" alt="Frontender freelancer" class="logo">
-        <div class="menu-burger">
+        <!-- <div class="menu-burger">
           <span></span>
-        </div>
+        </div> -->
         <nav class="menu">
           <ul class="menu-items">
             <li class="menu-item"><a href="#excellence">Преимущества</a></li>
@@ -50,7 +79,7 @@
           <span class="hero-subtitle wow fadeInRight" data-wow-delay="0.1s">Веб-разработчик</span>
           <h1 class="hero-title wow fadeInRight" data-wow-delay="0.2s">Александр Бандюк</h1>
           <p class="hero-description wow fadeInRight" data-wow-delay="0.4s">
-            Разрабатываю сайты для малого и среднего бизнеса. У меня можно заказать дизайн и верстку небольшого сайта или интернет-магазина
+            Разрабатываю сайты для малого и среднего бизнеса. У меня можно заказать верстку лендинга или интернет-магазина
           </p>
           <button class="button hero-button modal__open wow fadeInRight" data-wow-delay="0.6s">Бесплатная коснультация</button>
         </div>
