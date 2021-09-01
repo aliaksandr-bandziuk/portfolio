@@ -8,7 +8,7 @@
   height: 50px;
   /* text-align: center; */
   z-index: 99;
-  background: url(/img/icons/icon-open.svg) no-repeat top 10px right 20px;
+  background: url(img/icons/icon-open.svg) no-repeat top 10px right 20px;
   transition: all 0.5s ease-out;
   background-color: #1b1b25;
 }
@@ -48,7 +48,7 @@
 }
 
 .mobile-menu__close {
-  background: url(/img/icons/icon-close.svg) no-repeat top 10px right 20px;
+  background: url(img/icons/icon-close.svg) no-repeat top 10px right 20px;
   background-color: #1b1b25;
 }
 
