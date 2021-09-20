@@ -10,10 +10,19 @@
 
 @media (max-width: 836px) {
 
+  .header-wrapper {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 40;
+  }
+
   .hero-content {
     flex-direction: column-reverse;
-    /* flex-direction: column-reverse; */
     text-align: center;
+    margin-top: 50px;
   }
 
   .hero-avatar {
@@ -43,6 +52,10 @@
     margin-bottom: 46px;
   }
 
+  .project-details {
+    display: none;
+  }
+
   .contacts-block {
     flex-direction: column;
     align-items: flex-start;
@@ -57,10 +70,6 @@
 
   .hero {
     padding-bottom: 75px;
-  }
-
-  .hero-header {
-    margin-bottom: 38px;
   }
 
   .hero-avatar {

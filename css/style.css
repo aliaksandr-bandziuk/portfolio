@@ -22,6 +22,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #20202D;
+  border-radius: 50%;
+  box-shadow: -3px -3px 10px 1px #ffbb01;
+}
+
+.scroll-top:hover {
+  cursor: pointer;
+}
+
 .container {
   width: 90%;
   max-width: 945px;
@@ -43,19 +56,32 @@ body {
 }
 
 .hero {
-  padding-top: 50px;
+  padding-top: 200px;
   background: linear-gradient(0.01deg, #000000 0.01%, rgba(0, 0, 0, 0) 95.44%);
   padding-bottom: 155px;
+}
+
+.header-wrapper {
+  padding-top: 5px;
+  width: 100%;
+  position: fixed;
+  background: #1b1b25;
+  opacity: 0.9;
 }
 
 .hero-header{ 
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 105px;
+  align-items: center;  
+}
+
+.logo {
+  /* width: 150px; */
+  height: 55px;
 }
 
 /* menu */
+
 
 .menu-items {
   display: flex;
@@ -65,6 +91,7 @@ body {
 .menu-item {
   list-style: none;
   margin-left: 20px;
+  text-transform: uppercase;
 }
 
 .menu-item:first-child {
@@ -153,7 +180,7 @@ body {
 }
 
 .features-item {
-  flex-basis: 30%;
+  flex-basis: 40%;
   margin-bottom: 63px;
 }
 
@@ -225,6 +252,12 @@ body {
 
 .project-icon {
   margin-right: 16px;
+}
+
+.project-details {
+  margin-top: 44px;
+  font-size: 18px;
+  color: #ffbb01;
 }
 
 .swiper-pagination-bullets {
@@ -366,4 +399,44 @@ body {
   text-decoration-line: underline;
   color: #A5A5A5;
   margin-top: 72px;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0; 
+  bottom: 0;
+  background-color: #20202D;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  transform: translate(-50%, -50%); /* так выставляю модальное окно по центру экрана */
+}
+
+.modal__close {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+}
+
+.modal__close-button {
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.modal__close-img:hover {
+  transition: all .8s ease-in-out;
+  transform: rotate(360deg);
+  cursor: pointer;
 }
