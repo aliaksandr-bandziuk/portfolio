@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Клиент с сайта Orzeł Realty`,
+    subject: `New client from website`,
     text: mailBody,
   };
 
