@@ -69,7 +69,7 @@ const Contact: FC<ContactFormProps> = ({ onFormSubmitSuccess }) => {
     setSubmitting(true);
     try {
       const response = await axios.post("/api/monday", values);
-      if (response.data.message === "Email sent") {
+      if (response.data.message === "Lead successfully sent to monday.com") {
         setMessage(
           "I received your message and will contact you soon. Wait a moment :)"
         );
