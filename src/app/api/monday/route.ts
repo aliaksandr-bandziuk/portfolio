@@ -17,15 +17,17 @@ export async function POST(request: Request) {
         create_item (
           board_id: ${BOARD_ID},
           item_name: "${name}",
-          column_values: "${JSON.stringify({
-            phone,
-            email,
-          }).replace(/"/g, '\\"')}"
+          column_values: ${JSON.stringify(
+            JSON.stringify({
+              tekst_Mjj5PRDd: phone, // Указание идентификатора колонки телефона
+              tekst_Mjj5fnLd: email, // Убедитесь, что колонка email совпадает с её идентификатором в Monday.com
+            })
+          )}
         ) {
           id
         }
       }
-    `;
+`;
 
     const response = await fetch(MONDAY_API_URL, {
       method: "POST",
