@@ -1,52 +1,60 @@
-import { type NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
+import { type NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+import Mail from "nodemailer/lib/mailer";
 
-export async function POST(request: NextRequest) {
-  const { email, name, phone } = await request.json();
+const MONDAY_API_URL = "https://api.monday.com/v2";
+const MONDAY_API_KEY =
+  "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQ0NzQ2MTI0NCwiYWFpIjoxMSwidWlkIjo2OTYwMTEyOCwiaWFkIjoiMjAyNC0xMi0xMlQxMjo0MjoxMS4yOTZaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjY5NDk0MzgsInJnbiI6ImV1YzEifQ.L636NyAGC0pzHD24_d2g-OAgLEnKL5ljTfWgD6lKRds";
+const BOARD_ID = "1741071358";
 
-  const transport = nodemailer.createTransport({
-    service: 'gmail',
-    /* 
-      setting service as 'gmail' is same as providing these setings:
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true
-      If you want to use a different email provider other than gmail, you need to provide these manually.
-      Or you can go use these well known services and their settings at
-      https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
-  */
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const { name, phone, email } = body;
 
-  const mailBody = `Имя: ${name}\nEmail: ${email}\nТелефон: ${phone}`;
-
-  const mailOptions: Mail.Options = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `New client from website`,
-    text: mailBody,
-  };
-
-  const sendMailPromise = () =>
-    new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
-        if (!err) {
-          resolve('Email sent');
-        } else {
-          reject(err.message);
+    const query = `
+      mutation {
+        create_item (
+          board_id: ${BOARD_ID},
+          item_name: "${name}",
+          column_values: "${JSON.stringify({
+            phone,
+            email,
+          }).replace(/"/g, '\\"')}"
+        ) {
+          id
         }
-      });
+      }
+    `;
+
+    const response = await fetch(MONDAY_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: MONDAY_API_KEY,
+      },
+      body: JSON.stringify({ query }),
     });
 
-  try {
-    await sendMailPromise();
-    return NextResponse.json({ message: 'Email sent' });
-  } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    const data = await response.json();
+
+    if (data.errors) {
+      console.error("Errors from monday.com API:", data.errors);
+      return NextResponse.json(
+        { error: "Error while creating item in monday.com" },
+        { status: 400 }
+      );
+    }
+
+    return NextResponse.json(
+      { message: "Lead successfully sent to monday.com" },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
