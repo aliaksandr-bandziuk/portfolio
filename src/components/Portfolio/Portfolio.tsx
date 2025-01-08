@@ -47,7 +47,7 @@ const Portfolio = () => {
               rel="noopener noreferrer"
               className={styles.portfolioItem}
             >
-              DJ's website
+              DJ&apos;s website
             </Link>
             <Link
               href="https://scanm2.com/"
