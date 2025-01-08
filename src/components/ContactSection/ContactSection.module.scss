@@ -1,16 +1,22 @@
+.contact {
+  margin-top: clamp(3.125rem, 1.563rem + 6.25vw, 6.25rem);
+  margin-bottom: clamp(3.125rem, 1.563rem + 6.25vw, 6.25rem);
+}
+
 .contactInner {
-  border-radius: 100px;
+  border-radius: clamp(3.125rem, 1.563rem + 6.25vw, 6.25rem);
   background: radial-gradient(50% 50.00% at 50% 50.00%, #403A5F 0%, #211E2E 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding-top: clamp(2.813rem, 1.79rem + 5.11vw, 5.625rem);
   padding-bottom: clamp(4.063rem, 3.631rem + 2.16vw, 5.25rem);
   margin-bottom: clamp(5rem, 3.864rem + 5.68vw, 8.125rem);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contactWrapper {
