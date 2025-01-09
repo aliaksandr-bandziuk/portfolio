@@ -9,10 +9,6 @@ export const metadata: Metadata = {
   title: "Frontent Web Developer Aliaksandr Bandziuk",
   description:
     "I create websites and web applications with React, Next.js, and TypeScript. Also I have experience with Wordpress.",
-  other: {
-    "google-site-verification":
-      "google-site-verification=t7vRTEluZFEPv0FsWEjgaDykSIXWIoDJ8coSYpjKZlM",
-  },
 };
 
 export default function RootLayout({
