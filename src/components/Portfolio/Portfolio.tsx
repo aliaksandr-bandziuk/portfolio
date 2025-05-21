@@ -18,12 +18,12 @@ const Portfolio = () => {
               Education
             </Link>
             <Link
-              href="https://landi-academy.pl"
+              href="https://cyprusvipestates.com"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.portfolioItem}
             >
-              Beauty
+              Real Estate
             </Link>
             <Link
               href="https://peakprofit.bandziuk.com/"
