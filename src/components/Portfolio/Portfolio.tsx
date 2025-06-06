@@ -26,6 +26,14 @@ const Portfolio = () => {
               Real Estate
             </Link>
             <Link
+              href="https://dev.kronostelecom.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.portfolioItem}
+            >
+              Internet Provider
+            </Link>
+            <Link
               href="https://peakprofit.bandziuk.com/"
               target="_blank"
               rel="noopener noreferrer"
